@@ -7,3 +7,5 @@ then
 echo "ERROR ::You need to have root privileges to run this script"
 fi
 dnf install mysql -y
+
+dnf install git -y
