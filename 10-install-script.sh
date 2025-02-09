@@ -47,6 +47,7 @@ echo "GIT is already installed"
 fi
 
 
+
 # if [ $? -ne 0 ]
 # then
 # echo "ERROR :: GIT installation failed"
