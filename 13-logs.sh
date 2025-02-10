@@ -26,21 +26,21 @@ echo "ERROR ::You need to have root privileges to run this script"
 exit 1 # other than zero
 fi
 
-dnf list installed mysql &>>$LOG_FILE
+dnf list installed mysql &>>$LOG_FILE_NAME
 
 if [ $? -ne 0 ] # not installed
 then
-dnf install mysql -y &>>$LOG_FILE
+dnf install mysql -y &>>$LOG_FILE_NAME
 VALIDATE $? "Installing Mysql"
 else
 echo -e "MySQL is already.......$Y installed"
 fi
 
 
-dnf list installed git &>>$LOG_FILE
+dnf list installed git &>>$LOG_FILE_NAME
 if [ $? -ne 0 ]
 then
-dnf install git -y &>>$LOG_FILE
+dnf install git -y &>>$LOG_FILE_NAME
 VALIDATE $? "Installing GIT"
 else    
 echo -e "GIT is already.......$Y installed"
